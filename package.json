@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:node": "tsc && node index.js",
+    "test:ts-node": "ts-node index.ts",
+    "test:ts-node-transpile-only": "ts-node --transpile-only index.ts",
+    "test": "pnpm run test:node && pnpm run test:ts-node && pnpm run test:ts-node-transpile-only"
   },
   "keywords": [],
   "author": "",
